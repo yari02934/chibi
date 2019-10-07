@@ -1,5 +1,4 @@
 import math
-
 class Q(object):
     def __init__(self,a,b=1):
         gcd = math.gcd(a,b)
