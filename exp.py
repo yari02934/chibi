@@ -9,7 +9,7 @@ class Val(Expr):
     def __repr__(self):
         return f'Val({self.value})'
     def eval(self):
-        return self.value
+        return self.value 
 
 v = Val(1)
 #print(v)
