@@ -1,10 +1,9 @@
 
-example Zip 141-0001
+example Expr (1+2)*3
+example Expr 1*2+3
 
-Zip = {
-    Value '-' Value
-    #Zip
-}
+Expr = {Value '+' Prod #Add}/Prod
+Prod = {Value '*' Value #Mul}/Value
 
-Value = { DIGIT+ #Int }
+Value = {DIGIT+ #Int}/'('Expr')'
 DIGIT = [0-9]
