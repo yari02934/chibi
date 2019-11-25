@@ -7,9 +7,6 @@ Value = {[0-9]+#Int}
 """)
 parser = pegpy.generate(peg)
 
-t = parser ('1+2+3')
-print(repr(t))
-
 def calc(t):
     if t == 'Int':
         return int (str(t))
@@ -20,6 +17,14 @@ def calc(t):
     print(f'TODO {t.tag})
     retun 0
 
-t = paerser('1+2*3+4*5')
-print(repr(t))
-print(calc(t))
+#t = paerser('1+2*3+4*5')
+#print(repr(t))
+#print(calc(t))
+
+def main():
+    s = input('$')
+    t = parser(s)
+    print(calc(t)) 
+
+if __name__ == '__main__':
+    main()
