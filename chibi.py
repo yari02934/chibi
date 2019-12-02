@@ -70,7 +70,7 @@ class Var(Expr):
         return env[self.name]
     raise NameError(self.name)
 
-claas Assign(Expr):
+class Assign(Expr):
         __slots__ = ['name','e']
         def __init__(self, name, e):
             self.name = name
